@@ -4,7 +4,46 @@
 @import "global";
 @import "normalize";
 
-
+.header{
+  margin-bottom: 42px;
+  &__inner{
+    padding: 72px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo{
+    width: 67px;
+    height: 18px;
+  }
+  &__logo-link{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 156px;
+      height: 156px;
+      background: #B6DFFF;
+      filter: blur(200px);
+      left: -33px;
+      top: -71px;
+      border-radius: 50%;
+    }
+  }
+  &__telegram-link{
+    position: relative;
+    padding: 1px 0 1px 38px;
+    &::before{
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      content: '';
+      background-image: url('../images/telegram.svg');
+      background-size: cover;
+      left: 0;
+      top: 0;
+    }
+  }
+}
 
 
 
