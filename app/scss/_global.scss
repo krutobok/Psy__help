@@ -17,7 +17,8 @@ body{
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
+  color: $text-color;
+  overflow-x: hidden;
 }
 
 a{
@@ -42,8 +43,78 @@ h6{
   padding: 0;
 }
 .container{
-  max-width: 1260px;
+  max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
 }
-
+.title{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+}
+.text{
+  font-size: 24px;
+  line-height: 33px;
+}
+.logo{
+  width: 67px;
+  height: 18px;
+}
+.consult{
+  background: linear-gradient(151.9deg, rgba(255, 255, 255, 0.4) -53.37%, rgba(255, 255, 255, 0.4) 100%, rgba(255, 255, 255, 0.2) 100%);
+  backdrop-filter: blur(40px);
+  border-radius: 10px;
+  width: 344px;
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 222px;
+  align-items: flex-start;
+  position: relative;
+  &__btn{
+    background: #2196F3;
+    border-radius: 60px;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.has-ellipse{
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    filter: blur(200px);
+    border-radius: 50%;
+  }
+}
+.light-ellipse{
+  &::after{
+    filter: blur(100px);
+  }
+}
+.ultra-light-ellipse{
+  &::after{
+    filter: blur(70px);
+  }
+}
+.comment{
+  &::before{
+    position: absolute;
+    content: '';
+    background-image: url('../images/comment.svg');
+    width: 46px;
+    height: 39px;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
