@@ -87,7 +87,7 @@
   }
   &__title{
     margin-bottom: 21px;
-    max-width: 521px;
+    max-width: 552px;
   }
   &__consult{
     margin-left: auto;
@@ -351,6 +351,47 @@
         transform: rotate(-29.22deg);
       }
     }
+  }
+}
+.footer{
+  &-container{
+    padding: 67px 49px;
+    background: linear-gradient(91.29deg, rgba(182, 223, 255, 0.6) -21.23%, rgba(182, 223, 255, 0.1) 101.92%);
+    backdrop-filter: blur(200px);
+    border-radius: 10px 10px 0 0;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__authors{
+    font-size: 12px;
+    line-height: 16px;
+    color: #5E5E5E;
+  }
+  &__author{
+    margin-bottom: 8px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__author-link{
+    color: $btn-color;
+  }
+  &__language{
+    display: flex;
+  }
+  &__language-select{
+    font-weight: 400;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    height: 22px;
   }
 }
 
