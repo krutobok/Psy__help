@@ -170,4 +170,12 @@ h6{
 }
 .triangle{
   position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 26px;
+    background-image: url('../images/comment-2.svg');
+    background-size: cover;
+  }
 }
