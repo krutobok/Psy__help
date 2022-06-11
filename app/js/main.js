@@ -15,10 +15,6 @@ const langArr = {
         "ru": "Получить консультацию",
         "ua": "Отримати консультацію",
     },
-    "consult-btn-2": {
-        "ru": "Получить консультацию",
-        "ua": "Отримати консультацію",
-    },
     "cal-text": {
         "ru": "Разговор с психологом...",
         "ua": "Розмова з психологом...",
@@ -91,6 +87,62 @@ const langArr = {
         "ru": "Разработчик ",
         "ua": "Розробник ",
     },
+    "contact-right-title": {
+        "ru": "Обратная связь",
+        "ua": "Зворотній зв’язок",
+    },
+    "contact-right-text": {
+        "ru": "Пишите:",
+        "ua": "Пишіть:",
+    },
+    "contact-elem-title-1": {
+        "ru": "Семейный психолог",
+        "ua": "Сімейний психолог",
+    },
+    "contact-elem-subtitle-1": {
+        "ru": "Психология",
+        "ua": "Психологія",
+    },
+    "contact-elem-text-1": {
+        "ru": "Я работаю в этой связи",
+        "ua": "Я працюю в цій сфері",
+    },
+    "contact-elem-title-2": {
+        "ru": "Клинический психолог",
+        "ua": "Клінічний психолог",
+    },
+    "contact-elem-subtitle-2": {
+        "ru": "Психология, экофасилитация",
+        "ua": "Психологія, екофасилітація",
+    },
+    "contact-elem-text-2": {
+        "ru": "Психолог с богатим и разнообразным опытом оказания помощи как в Украине, так и зарубежом",
+        "ua": "Психолог з великим і різноманітним досвідом надання допомоги як в Україні, так і за кордоном",
+    },
+    "contact-elem-title-2-1": {
+        "ru": "Персональный психолог",
+        "ua": "Персональний психолог",
+    },
+    "contact-elem-text-2-1": {
+        "ru": "Онлайн и готова проконсультировать вас бесплатно!",
+        "ua": "Онлайн і готова проконсультувати вас безкоштовно!",
+    },
+    "contact-item-btn-text-1": {
+        "ru": "Позвонить",
+        "ua": "Подзвонити",
+    },
+    "contact-item-btn-text-2": {
+        "ru": "К профилю",
+        "ua": "До профілю",
+    },
+    "contact__item-consult-elem__text--1": {
+        "ru": "Аудиоконсультации",
+        "ua": "Аудіоконсультації",
+    },
+    "contact__item-consult-elem__text--2": {
+        "ru": "Видеоконсультации",
+        "ua": "Відеоконсультації",
+    },
     "about-bottom": {
         "ru": " У нас только <span class=\"about__bottom-text--span\">профессиональные психологи</span>\n" +
             "с большим опытом работи. Просто <span class=\"about__bottom-text--span\">оставте заявку</span> и специалист вам позвонит и окажет психологическую помощь.</p>",
@@ -123,9 +175,11 @@ function changeLanguage() {
     }
     document.querySelector('title').innerHTML = langArr['screen-title'][hash]
     for (let key in langArr) {
-        let elem = document.querySelector('.lng-' + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
+        let elems = document.querySelectorAll('.lng-' + key);
+        if (elems) {
+            elems.forEach(elem => {
+                elem.innerHTML = langArr[key][hash];
+            })
         }
 
     }
