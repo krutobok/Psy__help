@@ -63,7 +63,6 @@ h6{
 }
 .consult{
   background: linear-gradient(151.9deg, rgba(255, 255, 255, 0.4) -53.37%, rgba(255, 255, 255, 0.4) 100%, rgba(255, 255, 255, 0.2) 100%);
-  backdrop-filter: blur(40px);
   border-radius: 10px;
   width: 344px;
   padding: 32px 30px;
@@ -177,5 +176,19 @@ h6{
     height: 26px;
     background-image: url('../images/comment-2.svg');
     background-size: cover;
+  }
+}
+.telegram{
+  position: relative;
+  padding: 1px 0 1px 38px;
+  &::before{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    content: '';
+    background-image: url('../images/telegram.svg');
+    background-size: cover;
+    left: 0;
+    top: 0;
   }
 }

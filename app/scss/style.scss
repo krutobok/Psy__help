@@ -30,17 +30,6 @@
     }
   }
   &__telegram-link{
-    padding: 1px 0 1px 38px;
-    &::before{
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      content: '';
-      background-image: url('../images/telegram.svg');
-      background-size: cover;
-      left: 0;
-      top: 0;
-    }
     &::after{
       width: 933px;
       height: 624px;
@@ -356,9 +345,17 @@
 
 .contact{
   padding-bottom: 100px;
-  background-color: lightblue;
   &__items{
     display: flex;
+    &::after{
+      width: 1276px;
+      bottom: -197px;
+      height: 605px;
+      background: #FEFFD6;
+      transform: rotate(0.12deg);
+      left: -150px;
+      z-index: -5;
+    }
   }
   &__title{
     margin-bottom: 63px;
@@ -372,17 +369,38 @@
     flex-direction: column;
     align-items: center;
     width: 304px;
+    &--center{
+      &::after{
+        width: 670px;
+        height: 327px;
+        background: #93CFFF;
+        transform: rotate(1.71deg);
+        left: -88px;
+        top: -285px;
+        z-index: -2;
+      }
+    }
   }
   &__item-inner{
     &--1{
       margin-right: 32px;
       width: 350px;
       padding-left: 20px;
+      &::after{
+        width: 646px;
+        height: 921px;
+        background: #93CFFF;
+        transform: rotate(1.71deg);
+        top: -259px;
+        left: -72px;
+        z-index: -3;
+      }
     }
     &--2{
       margin-right: 82px;
       width: 324px;
       padding: 0 10px;
+      margin-top: 59px;
     }
   }
   &__item-logo{
@@ -421,6 +439,15 @@
         top: -25px;
         right: 30px;
         transform: rotate(180deg);
+      }
+      &::after{
+        width: 253px;
+        height: 250px;
+        background: #F3F573;
+        transform: rotate(0.12deg);
+        z-index: -4;
+        top: -30px;
+        right: -8px;
       }
     }
   }
@@ -533,6 +560,8 @@
     background: #F4F5FA;
     border-radius: 7px;
     width: 323px;
+    height: 152px;
+    padding: 37px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -542,6 +571,49 @@
     font-size: 14px;
     line-height: 16px;
     color: #000000;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  &__right{
+    margin-top: 103px;
+  }
+  &__consult{
+    margin-bottom: 44px;
+    &::before{
+      left: -45px;
+      right: auto;
+      transform: rotate(180deg) translateY(50%);
+    }
+    &::after{
+      width: 982px;
+      height: 737px;
+      right: -225px;
+      top: -220px;
+      z-index: -1;
+      background: #B6DFFF;
+      transform: rotate(1.71deg);
+    }
+  }
+  &__right-title{
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+  &__right-text{
+    margin-bottom: 21px;
+  }
+  &__right-link{
+    font-weight: 400;
+  }
+  &__right-contacts{
+    &::after{
+      width: 714px;
+      height: 492px;
+      background: #FEFFD6;
+      transform: rotate(0.12deg);
+      z-index: -6;
+      top: -83px;
+      left: -179px;
+    }
   }
 }
 
