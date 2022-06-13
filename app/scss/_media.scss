@@ -1,0 +1,343 @@
+@media (max-width: 1024px) {
+  .call{
+    zoom: 90%;
+    backdrop-filter: none;
+  }
+  .title{
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .text {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .first-screen__content {
+    margin-bottom: 40px;
+    padding-top: 53px;
+  }
+}
+@media (max-width: 850px){
+  .header__inner {
+    padding: 50px 0;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  .call {
+    zoom: 80%;
+  }
+  .text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .consult {
+    width: 280px;
+    padding: 30px 20px;
+  }
+  body{
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .telegram{
+    padding: 1px 0 0 24px;
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .first-screen {
+    padding: 30px 0 120px;
+  }
+  .why__img {
+    display: inline-block;
+    width: 398px;
+    height: 360px;
+  }
+  .why__img-box {
+    margin-left: -75px;
+  }
+  .why {
+    padding-bottom: 130px;
+  }
+  .footer-container {
+    padding: 57px 40px;
+  }
+  .about {
+    padding-bottom: 140px;
+  }
+}
+@media (max-width: 700px){
+  .footer-container {
+    padding: 37px 30px;
+  }
+  .footer__language-span{
+    display: none;
+  }
+  .first-screen__left {
+    flex-basis: auto;
+    padding-right: 0;
+    margin-right: 0;
+    &::after{
+      width: 453px;
+      height: 499px;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .header__inner {
+    padding: 37px 0;
+  }
+  .first-screen__consult {
+    margin: 0 auto 33px;
+    &::before{
+      transform: rotate(90deg) translate(0, -50%);
+      top: auto;
+      bottom: -41px;
+      right: 50%;
+    }
+  }
+  .first-screen__content {
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .call{
+    backdrop-filter: none;
+    align-self: center;
+  }
+  .first-screen__inner {
+   flex-direction: column;
+  }
+  .consult__btn{
+    width: 100%;
+    padding: 14px 0;
+  }
+  .header, .first-screen{
+    .has-ellipse{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .first-screen{
+    position: relative;
+    &::after{
+      position: absolute;
+      background-image: url('../images/top-mobile-bg.svg');
+      width: 1000px;
+      height: 1200px;
+      content: '';
+      left: -200px;
+      top: -300px;
+      background-size: cover;
+      z-index: -2;
+    }
+  }
+  .why__inner{
+    flex-direction: column;
+  }
+  .why__img-box {
+    margin-left: -20px;
+    margin-top: -39px;
+  }
+  .why__title {
+    margin-bottom: 20px;
+  }
+  .why__left {
+    padding-top: 0;
+  }
+  .why {
+    padding-bottom: 110px;
+  }
+  .about__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 10px;
+    margin-bottom: 50px;
+  }
+  .about{
+    .has-ellipse{
+      &::after{
+        display: none;
+      }
+    }
+  }
+  .media-ellipse{
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      filter: blur(40px);
+      border-radius: 50%;
+    }
+  }
+  .about__item{
+    display: flex;
+  }
+  .about__item-img {
+    margin-bottom: 0;
+    margin-right: 18px;
+  }
+  .about__item-text{
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 211px;
+    &--1::after{
+      width: 164px;
+      height: 164px;
+      background: #93CFFF;
+      left: 37px;
+      top: -82px;
+      z-index: -3;
+    }
+    &--4::after{
+      width: 125px;
+      height: 121px;
+      background: #93CFFF;
+      transform: rotate(-29.22deg);
+      left: -39px;
+      top: -50px;
+      z-index: -1;
+    }
+    &--5::after{
+      width: 150px;
+      height: 95px;
+      background: #FEFFD6;
+      transform: rotate(-40.43deg);
+      z-index: -5;
+      left: 17px;
+      top: -21px;
+    }
+    &--6::after{
+      width: 112px;
+      height: 108px;
+      top: -5px;
+      left: -15px;
+      background: #93CFFF;
+      transform: rotate(-29.22deg);
+      z-index: -4;
+    }
+    &--8::after{
+      width: 156px;
+      height: 213px;
+      background: #93CFFF;
+      transform: rotate(-123.42deg);
+      z-index: -4;
+      top: 20px;
+      left: -163px;
+    }
+  }
+  .about__bottom-consult{
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(151.9deg, rgba(255, 255, 255, 0.6) -53.37%, rgba(255, 255, 255, 0.4) 100%, rgba(255, 255, 255, 0.4) 100%);
+    border-radius: 10px;
+    &::before{
+      display: none;
+    }
+    &::after{
+      display: block;
+      background: #F3F573;
+      width: 125px;
+      height: 120px;
+      transform: rotate(-29.22deg);
+      bottom: -41px;
+      right: -49px;
+    }
+  }
+  .about__bottom-btn{
+    order: 3;
+  }
+  .footer__inner{
+    align-items: center;
+  }
+  .about__bottom-text{
+    font-size: 14px;
+    line-height: 19px;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 580px){
+  .about__items{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 460px){
+  .footer-container {
+    padding: 20px;
+    backdrop-filter: blur(128px);
+    border-radius: 6.4px 6.4px 0 0;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .header__inner {
+    padding: 20px 0;
+  }
+  .call{
+    zoom: 60%;
+  }
+  .first-screen {
+    padding: 30px 0 100px;
+  }
+  .why__img{
+    width: 329px;
+    height: 300px;
+  }
+  .why__img-box {
+    margin-left: -40px;
+    margin-top: -45px;
+    &::before {
+      filter: blur(50px);
+      width: 195px;
+      height: 142px;
+      bottom: -16px;
+      right: -5px;
+    }
+    &::after {
+      width: 393px;
+      height: 229px;
+      top: 37px;
+      right: auto;
+      left: -26px;
+    }
+  }
+  .why {
+    padding-bottom: 82px;
+  }
+  .why__left::after {
+    width: 164px;
+    height: 164px;
+    bottom: -79px;
+    top: 22px;
+    left: 12px;
+  }
+  .has-ellipse{
+    &::after{
+      filter: blur(128px);
+    }
+  }
+  .light-ellipse::after {
+    filter: blur(50px);
+  }
+  .about__items {
+    margin-bottom: 35px;
+  }
+  .about {
+    padding-bottom: 100px;
+  }
+}

@@ -154,8 +154,11 @@ const langArr = {
 }
 const select = document.querySelector('.footer__language-select');
 const allLang = ['ru', 'ua'];
-
 select.addEventListener('change', changeURLLanguage);
+
+
+
+
 
 function changeURLLanguage() {
     let lang = select.value
@@ -185,4 +188,20 @@ function changeLanguage() {
     }
 }
 
+function AboutConstruct(){
+    const aboutBottomText = document.querySelector('.about__bottom-text')
+    const aboutBottomConsult = document.querySelector('.about__bottom-consult')
+    const aboutBottom = document.querySelector('.about__bottom')
+    if (window.innerWidth <= 700){
+        aboutBottomConsult.append(aboutBottomText)
+    }
+    else{
+        aboutBottom.append(aboutBottomText)
+    }
+}
+window.addEventListener('resize',  ()=> {
+    AboutConstruct()
+});
+
+AboutConstruct()
 changeLanguage()

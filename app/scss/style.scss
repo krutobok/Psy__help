@@ -1,8 +1,9 @@
 @import "vars";
 @import "libs";
 @import "fonts";
-@import "global";
 @import "normalize";
+@import "global";
+
 
 .header{
   &__inner{
@@ -92,6 +93,7 @@
 }
 .call{
   flex-basis: 304px;
+  width: 304px;
   background: linear-gradient(151.9deg, rgba(255, 255, 255, 0.8) -53.37%, rgba(255, 255, 255, 0.4) 100%);
   backdrop-filter: blur(40px);
   border-radius: 20px;
@@ -100,6 +102,7 @@
   flex-direction: column;
   align-items: center;
   height: 574px;
+  flex-shrink: 0;
   font-family: 'Roboto', sans-serif;
   &::after{
     width: 382px;
@@ -214,7 +217,7 @@
   &__items{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 71px 0;
+    gap: 71px 10px;
     margin-bottom: 50px;
     &::after{
       width: 240px;
@@ -616,7 +619,9 @@
     }
   }
 }
-
+//.header, .footer, .first-screen, .contact, .why, .about{
+//  overflow-x: hidden;
+//}
 
 
 

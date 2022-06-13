@@ -1,5 +1,6 @@
 html{
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -10,7 +11,7 @@ html{
 
 body{
   min-width: 320px;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 0;
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -20,7 +21,9 @@ body{
   color: $text-color;
   overflow-x: hidden;
 }
-
+//.wrapper{
+//  overflow-x: hidden;
+//}
 a{
   text-decoration: none;
   color: inherit;
