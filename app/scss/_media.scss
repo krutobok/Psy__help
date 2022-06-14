@@ -1,3 +1,14 @@
+@media (max-width: 1160px){
+  .contact__item-inner{
+    zoom: 85%;
+  }
+  .contact__item-inner--2 {
+    margin-right: 40px;
+  }
+}
+
+
+
 @media (max-width: 1024px) {
   .call{
     zoom: 90%;
@@ -14,6 +25,35 @@
   .first-screen__content {
     margin-bottom: 40px;
     padding-top: 53px;
+  }
+  .contact__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact__item-inner{
+    margin: 0 auto;
+  }
+  .contact__item-inner--2 {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  .contact__right{
+    display: flex;
+    flex-direction: row-reverse;
+    grid-column: span 2;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .contact__consult{
+    margin-bottom: 0;
+    &::before{
+      left: 50%;
+      top: -40px;
+      transform: rotate(-90deg) translate(0, -50%);
+    }
+  }
+  .contact__consult::after {
+    height: 612px;
   }
 }
 @media (max-width: 850px){
@@ -66,6 +106,21 @@
   }
   .about {
     padding-bottom: 140px;
+  }
+  .contact__item-inner {
+    zoom: 77%;
+  }
+  .contact__consult{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__item-inner--1 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact__item-inner--2 {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media (max-width: 700px){
@@ -244,7 +299,9 @@
       display: none;
     }
     &::after{
-      display: block;
+      display: block!important;
+      left: auto;
+      top: auto;
       background: #F3F573;
       width: 125px;
       height: 120px;
@@ -265,10 +322,35 @@
     padding-top: 0;
     margin-bottom: 20px;
   }
+  .contact__item-inner {
+    zoom: 70%;
+  }
 }
 @media (max-width: 580px){
   .about__items{
     grid-template-columns: 1fr;
+  }
+  .contact__consult{
+    display: none;
+  }
+  .contact__right{
+    justify-content: flex-start;
+  }
+  .contact__right-contacts{
+    margin-right: auto;
+  }
+  .contact__right-title {
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .contact__right-text {
+    margin-bottom: 10px;
+  }
+  .contact__right{
+    margin-top: 30px;
+  }
+  .contact__title {
+    margin-bottom: 44px;
   }
 }
 @media (max-width: 460px){
@@ -339,5 +421,17 @@
   }
   .about {
     padding-bottom: 100px;
+  }
+  .about__bottom-consult {
+    width: 280px;;
+    padding: 37px 20px
+  }
+  .about__bottom-text {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .about__bottom-img {
+    width: 220px;
+    height: 130px;
   }
 }
