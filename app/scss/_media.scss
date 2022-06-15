@@ -122,6 +122,10 @@
     margin-right: auto;
     margin-left: auto;
   }
+  .modal {
+     width: 500px;
+   }
+
 }
 @media (max-width: 700px){
   .footer-container {
@@ -325,6 +329,10 @@
   .contact__item-inner {
     zoom: 70%;
   }
+  .consult__btn.modal__btn{
+    width: auto;
+    padding: 14px 30px;
+  }
 }
 @media (max-width: 580px){
   .about__items{
@@ -372,6 +380,16 @@
         display: none;
       }
     }
+  }
+  .modal__title {
+    margin-bottom: 20px;
+  }
+  .modal__btn {
+    margin-top: 17px;
+  }
+  .modal {
+    width: 90%;
+    padding: 10px;
   }
 }
 @media (max-width: 460px){
