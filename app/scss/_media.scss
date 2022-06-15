@@ -352,6 +352,27 @@
   .contact__title {
     margin-bottom: 44px;
   }
+  .contact__item-inner {
+    zoom: 60%;
+  }
+  .contact{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: '';
+      background: url("../images/contact-mobile-bg.svg");
+      left: -226px;
+      top: -111px;
+      width: 818px;
+      height: 805px;
+      z-index: -2;
+    }
+    .has-ellipse{
+      &::after{
+        display: none;
+      }
+    }
+  }
 }
 @media (max-width: 460px){
   .footer-container {
@@ -359,6 +380,18 @@
     backdrop-filter: blur(128px);
     border-radius: 6.4px 6.4px 0 0;
   }
+  .contact__item-inner {
+    zoom: 40%;
+  }
+  .contact{
+    &::after{
+      top: -130px;
+      width: 818px;
+      height: 700px;
+      background-size: cover;
+    }
+  }
+
   .title {
     font-size: 24px;
     line-height: 28px;
