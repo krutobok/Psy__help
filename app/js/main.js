@@ -143,11 +143,37 @@ const langArr = {
         "ru": "Видеоконсультации",
         "ua": "Відеоконсультації",
     },
-    "about-bottom": {
-        "ru": " У нас только <span class=\"about__bottom-text--span\">профессиональные психологи</span>\n" +
-            "с большим опытом работи. Просто <span class=\"about__bottom-text--span\">оставте заявку</span> и специалист вам позвонит и окажет психологическую помощь.</p>",
-        "ua": " У нас лише <span class=\"about__bottom-text--span\">професійні психологи</span>\n" +
-            "з великим досвідом роботи. Просто <span class=\"about__bottom-text--span\">залишіть заявку</span> і спеціаліст вам зателефонує та надасть психологічну допомогу.</p>",
+    "modal-title": {
+        "ru": "Оставте заявку",
+        "ua": "Залишіть заявку",
+    },
+    "modal-label--1": {
+        "ru": "Оставте заявку",
+        "ua": "Залишіть заявку",
+    },
+    "modal-label--2": {
+        "ru": "Оставте заявку",
+        "ua": "Залишіть заявку",
+    },
+    "about-bottom--1": {
+        "ru": "У нас только ",
+        "ua": "У нас лише ",
+    },
+    "about-bottom--2": {
+        "ru": "профессиональные психологи ",
+        "ua": "професійні психологи ",
+    },
+    "about-bottom--3": {
+        "ru": "с большим опытом работи. Просто ",
+        "ua": "з великим досвідом роботи. Просто ",
+    },
+    "about-bottom--4": {
+        "ru": "оставте заявку ",
+        "ua": "залишіть заявку ",
+    },
+    "about-bottom--5": {
+        "ru": " и специалист вам позвонит и окажет психологическую помощь. ",
+        "ua": " і спеціаліст вам зателефонує та надасть психологічну допомогу. ",
     },
 
 
@@ -202,6 +228,64 @@ function AboutConstruct(){
 window.addEventListener('resize',  ()=> {
     AboutConstruct()
 });
+
+
+const modalsBtn = [].slice.call(document.querySelectorAll('[data-modal="modal"]'))
+const modalWindow = document.querySelector('.modal')
+const form = document.querySelector('.modal__form')
+const modalBtnClose = document.querySelector('.btn__modal--close')
+const modalBtnSubmit = document.querySelector('.modal__btn')
+const modalTitle = document.querySelector('.modal__title')
+const input1 = document.querySelector('.modal__input--1')
+const input2 = document.querySelector('.modal__input--2')
+function modal(){
+    form.addEventListener('submit', onSubmit);
+    modalsBtn.forEach(btn => {
+        btn.addEventListener('click',  function modalOpen() {
+            modalWindow.classList.add('active')
+            // if (btn.getAttribute('data-book') === 'true'){
+            //     modalTitle.textContent = 'Введіть дані для бронювання'
+            //     modalBtnSubmit.textContent = 'Забронювати'
+            // }
+            // else{
+            //     modalTitle.textContent = "Зв'яжемося з вами за 30 хвилин"
+            //     modalBtnSubmit.textContent = "Зв'язатися"
+            // }
+        })
+    })
+    modalBtnClose.addEventListener('click', function () {
+        modalWindow.classList.remove('active')
+        input1.style.borderColor = "#52503B"
+        input2.style.borderColor = "#52503B"
+    })
+    input1.addEventListener('input', ()=> input1.style.borderColor = "#52503B")
+    input2.addEventListener('input', ()=> input2.style.borderColor = "#52503B")
+    function onSubmit(event) {
+        event.preventDefault();
+        const inputValue1 = input1.value
+        const inputValue2 = input2.value
+        if (inputValue1 !== '' && inputValue2 !== ''){
+            modalWindow.classList.remove('active')
+            input1.value = ''
+            input2.value = ''
+        }
+        else if (inputValue1 !== '' && inputValue2 === ''){
+            input2.style.borderColor = "red"
+        }
+        else if (inputValue1 === '' && inputValue2 !== ''){
+            input1.style.borderColor = "red"
+        }
+        else if (inputValue1 === '' && inputValue2 === ''){
+            input1.style.borderColor = "red"
+            input2.style.borderColor = "red"
+        }
+    }
+}
+
+
+
+modal()
+
 
 AboutConstruct()
 changeLanguage()

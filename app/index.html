@@ -34,10 +34,10 @@
                     </div>
                     <div class="first-screen__consult consult has-ellipse comment">
                         <p class="first-screen__consult-text consult__text lng-consult-text">Залиш заявку на безкоштовну психологічну підтримку вже зараз. Наш спеціаліст вам зателефонує та надасть психологічну допомогу.</p>
-                        <button  class="first-screen__consult-btn consult__btn lng-consult-btn">Отримати консультацію</button>
+                        <button  class="first-screen__consult-btn consult__btn lng-consult-btn" data-modal="modal">Отримати консультацію</button>
                     </div>
                 </div>
-                <a href="#" class="call bottom-line has-ellipse">
+                <a href="tel:380500500500" class="call bottom-line has-ellipse">
                     <img src="images/logo.svg" alt="logo" class="call__logo logo">
                     <p class="call__text lng-cal-text">Розмова з психологом...</p>
                     <img src="images/call-img.jpg" alt="photo" class="call__img">
@@ -125,10 +125,10 @@
                 <div class="about__bottom ">
                     <div class="about__bottom-consult comment has-ellipse light-ellipse media-ellipse">
                         <img src="images/about-bottom.svg" alt="" class="about__bottom-img">
-                        <button class="about__bottom-btn consult__btn lng-consult-btn">Отримати консультацію</button>
+                        <button class="about__bottom-btn consult__btn lng-consult-btn" data-modal="modal">Отримати консультацію</button>
                     </div>
-                    <p class="about__bottom-text text has-ellipse ultra-light-ellipse lng-about-bottom">У нас лише <span class="about__bottom-text--span">професійні психологи</span>
-                        з великим досвідом роботи. Просто <span class="about__bottom-text--span">залишіть заявку</span> і спеціаліст вам зателефонує та надасть психологічну допомогу.</p>
+                    <p class="about__bottom-text text has-ellipse ultra-light-ellipse"><span class="lng-about-bottom--1">У нас лише</span><span class="about__bottom-text--span lng-about-bottom--2" >професійні психологи</span>
+                        <span class="lng-about-bottom--3">з великим досвідом роботи. Просто</span><span class="about__bottom-text--span lng-about-bottom--4" data-modal="modal">залишіть заявку </span><span class="lng-about-bottom--5"> і спеціаліст вам зателефонує та надасть психологічну допомогу.</span></p>
                 </div>
             </div>
         </div>
@@ -164,9 +164,9 @@
                             </div>
 
                             <div class="contact__item-btn__box call-item">
-                                <button class="contact__item-btn call-item-img-box">
+                                <a href="tel:380500500500" class="contact__item-btn call-item-img-box">
                                     <img src="images/contact-icon-1.svg" alt="call" class="contact__item-btn__img contact__item-btn__img--1 call-item-img">
-                                </button>
+                                </a>
                                 <p class="contact__item-btn__text lng-contact-item-btn-text-1 call-item-text">Подзвонити</p>
                             </div>
 
@@ -187,7 +187,7 @@
                                 <p class="contact__item-consult-elem__text lng-contact__item-consult-elem__text--2">Відеоконсультації</p>
                             </div>
                             <div class="contact__item-btn__box call-item">
-                                <button class="contact__item-btn call-item-img-box">
+                                <button class="contact__item-btn call-item-img-box" >
                                     <img src="images/contact-icon-2.svg" alt="call" class="contact__item-btn__img call-item-img">
                                 </button>
                                 <p class="contact__item-btn__text lng-contact-item-btn-text-2 call-item-text">До профілю</p>
@@ -198,7 +198,7 @@
                     <div class="contact__right">
                         <div class="consult contact__consult comment has-ellipse">
                             <p class="first-screen__consult-text consult__text lng-consult-text">Залиш заявку на безкоштовну психологічну підтримку вже зараз. Наш спеціаліст вам зателефонує та надасть психологічну допомогу.</p>
-                            <button  class="first-screen__consult-btn consult__btn lng-consult-btn">Отримати консультацію</button>
+                            <button  class="first-screen__consult-btn consult__btn lng-consult-btn" data-modal="modal">Отримати консультацію</button>
                         </div>
                         <div class="contact__right-contacts has-ellipse light-ellipse">
                             <h6 class="contact__right-title text lng-contact-right-title">Зворотній зв’язок</h6>
@@ -230,6 +230,26 @@
     </div>
 </footer>
 
+
+<div class="modal">
+    <div class="modal__inner">
+        <h3 class="modal__title title lng-modal-title">Залишіть заявку</h3>
+        <form class="modal__form">
+            <label class="modal__label text">
+                <span class="lng-modal-label--1"> Ваше ім'я</span>
+                <input type="text" class="modal__input modal__input--1">
+            </label>
+            <label class="modal__label modal__label--2 text">
+                <span class="lng-modal-label--2">Ваш номер телефону</span>
+                <input type="tel" class="modal__input modal__input--2">
+            </label>
+            <button type="submit" class="modal__btn consult__btn lng-consult-btn">Отримати консультацію</button>
+        </form>
+    </div>
+    <button class="btn__modal--close">
+        <img src="images/close.svg" alt="close">
+    </button>
+</div>
     
     
     <script src="js/main.min.js"></script>
