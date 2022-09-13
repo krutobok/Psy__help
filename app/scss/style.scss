@@ -469,7 +469,7 @@
       height: 12px;
       background-color: #7BFC01;
       position: absolute;
-      bottom: -3px;
+      bottom: 28px;
       left: 36px;
       z-index: 10;
       border-radius: 50%;
@@ -497,6 +497,7 @@
     font-size: 16px;
     line-height: 19px;
     color: #8A898E;
+    grid-column: span 2;
   }
   &__element-text{
     font-size: 13px;
@@ -547,14 +548,15 @@
     line-height: 14px;
     color: #8A898E;
     position: relative;
+    grid-column: span 2;
     &::before{
       content: '';
       width: 17px;
       height: 17px;
       background-color: #7BFC01;
       position: absolute;
-      bottom: -15px;
-      left: -19px;
+      bottom: 25px;
+      left: 55px;
       z-index: 10;
       border-radius: 50%;
     }
