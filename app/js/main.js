@@ -234,8 +234,6 @@ const modalsBtn = [].slice.call(document.querySelectorAll('[data-modal="modal"]'
 const modalWindow = document.querySelector('.modal')
 const form = document.querySelector('.modal__form')
 const modalBtnClose = document.querySelector('.btn__modal--close')
-const modalBtnSubmit = document.querySelector('.modal__btn')
-const modalTitle = document.querySelector('.modal__title')
 const input1 = document.querySelector('.modal__input--1')
 const input2 = document.querySelector('.modal__input--2')
 function modal(){
@@ -243,14 +241,6 @@ function modal(){
     modalsBtn.forEach(btn => {
         btn.addEventListener('click',  function modalOpen() {
             modalWindow.classList.add('active')
-            // if (btn.getAttribute('data-book') === 'true'){
-            //     modalTitle.textContent = 'Введіть дані для бронювання'
-            //     modalBtnSubmit.textContent = 'Забронювати'
-            // }
-            // else{
-            //     modalTitle.textContent = "Зв'яжемося з вами за 30 хвилин"
-            //     modalBtnSubmit.textContent = "Зв'язатися"
-            // }
         })
     })
     modalBtnClose.addEventListener('click', function () {
