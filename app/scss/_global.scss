@@ -149,6 +149,7 @@ h6{
   &-img{
     width: 21px;
     height: 21px;
+    object-fit: contain;
     &[alt="camera"]{
       width: 16px;
       height: 11px;
